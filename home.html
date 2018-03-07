@@ -1,3 +1,13 @@
+<?php
+    session_start();
+    if(!isset($_SESSION['simple_login'])){
+        header("Location: index.php");
+        exit();
+    }
+     
+/*** you can  write your protected content here ***/
+ 
+?>
 <!DOCTYPE html>
 <!--
 Template Name: Merciano
