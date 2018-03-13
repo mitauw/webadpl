@@ -12,7 +12,7 @@
         if($username == $user['user'] && $pass == $user['pass']){
             session_start();
             $_SESSION['simple_login'] = $username;
-            header("Location: home.php");
+            header("Location: crud.php");
             exit();
         }else{
             $error = '<div class="alert alert-danger">Invalid Login</div>';
@@ -43,7 +43,7 @@
                 </div>
                 <div class="panel-body">
                     <?php echo $error; ?>
-                    <form accept-charset="UTF-8" role="form" method="post" action="index.php">
+                    <form accept-charset="UTF-8" role="form" method="post" action="Login.php">
                         <fieldset>
                             <div class="form-group">
                                 <input class="form-control" placeholder="Username" name="username" type="text">
